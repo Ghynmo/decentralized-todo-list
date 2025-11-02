@@ -1,0 +1,1790 @@
+{
+  "version": 3,
+  "sources": [
+    "../../todo_app/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAWQ;AAAgC;AAAhC;AARR;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;AAAA;;;;;;;;;;;AAcK;;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAOgB;AAAA;AAAA;AAAA;AACS;AAAb;AACT;AAAA;;AAAA;AAGU;AACV;AAAA;;AAAA;AAAA;AAAA;;AAAA;;AAAA;AACA;AAAA;;AAAA;AAA0B;;;AAA1B;AAdH;AAAA;AAAA;AAAA;AAAA;AAAA;AAkBA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAOqB;AAAf;AAAA;AAAA;AAAA;;AAAA;;;AACQ;;AARd;AAAA;AAAA;AAAA;AAAA;AAAA;AAWG;AAAA;;AAAA;AAA0B;;;AAA1B;AAEO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAbV;;;AAeA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMqB;AAAf;AAAA;AAAA;AAAA;AAAA;;AAAA;;;AACQ;;AAPd;AAAA;AAAA;AAAA;AAAA;AAAA;AASU;AAAA;AAAA;AATV;;;AAWA;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAMqB;AAAf;AAAA;AAAA;AAAA;AAAA;;AAAA;;;AACQ;;;AAPd;AAAA;AAAA;AAAA;AAAA;AAAA;AASU;AAAA;AAAA;AATV;;;AAgBsB;AAAA;AAAA;AAAA;AAAZ;AALV;AAAA;AAAA;AAAA;AAAA;AAAA;AAOA;;;AAAA;;AAAA;AAAA;AAAA;AAAA;AAMqB;AAAf;AAAA;AAAA;AAAA;AAAA;;AAAA;;;AACQ;;AAPd;AAAA;AAAA;AAAA;AAAA;AAAA;AAUG;AAAA;;AACI;AAAA;;AAAA;AAAJ;;AAEO;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAbV",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "algopy.arc4.ARC4Contract.approval_program",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 1 0 8"
+    },
+    "6": {
+      "op": "bytecblock 0x151f7c75 \"todo_counter\" \"todos\" \"completed\" 0x000e546f646f206e6f7420666f756e64"
+    },
+    "59": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "61": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "64": {
+      "op": "bytec_1 // \"todo_counter\"",
+      "defined_out": [
+        "\"todo_counter\""
+      ],
+      "stack_out": [
+        "\"todo_counter\""
+      ]
+    },
+    "65": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "\"todo_counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"todo_counter\"",
+        "0"
+      ]
+    },
+    "66": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "67": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "69": {
+      "op": "bz main___algopy_default_create@15",
+      "stack_out": []
+    },
+    "72": {
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "74": {
+      "op": "!",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "75": {
+      "error": "OnCompletion must be NoOp",
+      "op": "assert // OnCompletion must be NoOp",
+      "stack_out": []
+    },
+    "76": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "78": {
+      "op": "assert",
+      "stack_out": []
+    },
+    "79": {
+      "op": "pushbytess 0x38011815 0x447f8198 0xc45b3ab4 0xc274afc2 0xfe5825e9 0x77363853 // method \"create_todo(string)uint64\", method \"complete_todo(uint64)string\", method \"get_todo(uint64)string\", method \"is_completed(uint64)bool\", method \"get_total_todos()uint64\", method \"delete_todo(uint64)string\"",
+      "defined_out": [
+        "Method(complete_todo(uint64)string)",
+        "Method(create_todo(string)uint64)",
+        "Method(delete_todo(uint64)string)",
+        "Method(get_todo(uint64)string)",
+        "Method(get_total_todos()uint64)",
+        "Method(is_completed(uint64)bool)"
+      ],
+      "stack_out": [
+        "Method(create_todo(string)uint64)",
+        "Method(complete_todo(uint64)string)",
+        "Method(get_todo(uint64)string)",
+        "Method(is_completed(uint64)bool)",
+        "Method(get_total_todos()uint64)",
+        "Method(delete_todo(uint64)string)"
+      ]
+    },
+    "111": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(complete_todo(uint64)string)",
+        "Method(create_todo(string)uint64)",
+        "Method(delete_todo(uint64)string)",
+        "Method(get_todo(uint64)string)",
+        "Method(get_total_todos()uint64)",
+        "Method(is_completed(uint64)bool)",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "Method(create_todo(string)uint64)",
+        "Method(complete_todo(uint64)string)",
+        "Method(get_todo(uint64)string)",
+        "Method(is_completed(uint64)bool)",
+        "Method(get_total_todos()uint64)",
+        "Method(delete_todo(uint64)string)",
+        "tmp%6#0"
+      ]
+    },
+    "114": {
+      "op": "match create_todo complete_todo get_todo is_completed get_total_todos delete_todo",
+      "stack_out": []
+    },
+    "128": {
+      "op": "err"
+    },
+    "129": {
+      "block": "main___algopy_default_create@15",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "131": {
+      "op": "!",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "132": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "134": {
+      "op": "!",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "135": {
+      "op": "&&",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "136": {
+      "error": "OnCompletion must be NoOp && can only call when creating",
+      "op": "assert // OnCompletion must be NoOp && can only call when creating",
+      "stack_out": []
+    },
+    "137": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "138": {
+      "op": "return",
+      "stack_out": []
+    },
+    "139": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.create_todo[routing]",
+      "params": {},
+      "block": "create_todo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0"
+      ]
+    },
+    "142": {
+      "op": "dup",
+      "defined_out": [
+        "task#0",
+        "task#0 (copy)"
+      ],
+      "stack_out": [
+        "task#0",
+        "task#0 (copy)"
+      ]
+    },
+    "143": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0",
+        "task#0",
+        "task#0 (copy)"
+      ],
+      "stack_out": [
+        "task#0",
+        "task#0 (copy)",
+        "0"
+      ]
+    },
+    "144": {
+      "error": "invalid array length header",
+      "op": "extract_uint16 // on error: invalid array length header",
+      "defined_out": [
+        "aggregate%array_length%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "aggregate%array_length%0#0"
+      ]
+    },
+    "145": {
+      "op": "pushint 2 // 2",
+      "defined_out": [
+        "2",
+        "aggregate%array_length%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "aggregate%array_length%0#0",
+        "2"
+      ]
+    },
+    "147": {
+      "op": "+",
+      "defined_out": [
+        "add%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "add%0#0"
+      ]
+    },
+    "148": {
+      "op": "dig 1",
+      "stack_out": [
+        "task#0",
+        "add%0#0",
+        "task#0 (copy)"
+      ]
+    },
+    "150": {
+      "op": "len",
+      "defined_out": [
+        "add%0#0",
+        "len%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "add%0#0",
+        "len%0#0"
+      ]
+    },
+    "151": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "eq%0#0"
+      ]
+    },
+    "152": {
+      "error": "invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "op": "assert // invalid number of bytes for arc4.dynamic_array<arc4.uint8>",
+      "stack_out": [
+        "task#0"
+      ]
+    },
+    "153": {
+      "op": "intc_1 // 0",
+      "stack_out": [
+        "task#0",
+        "0"
+      ]
+    },
+    "154": {
+      "op": "bytec_1 // \"todo_counter\"",
+      "defined_out": [
+        "\"todo_counter\"",
+        "0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "0",
+        "\"todo_counter\""
+      ]
+    },
+    "155": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "current_id#0",
+        "maybe_exists%0#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "current_id#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "156": {
+      "error": "check self.todo_counter exists",
+      "op": "assert // check self.todo_counter exists",
+      "stack_out": [
+        "task#0",
+        "current_id#0"
+      ]
+    },
+    "157": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "current_id#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "current_id#0",
+        "1"
+      ]
+    },
+    "158": {
+      "op": "+",
+      "defined_out": [
+        "new_id#0",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "new_id#0"
+      ]
+    },
+    "159": {
+      "op": "bytec_1 // \"todo_counter\"",
+      "stack_out": [
+        "task#0",
+        "new_id#0",
+        "\"todo_counter\""
+      ]
+    },
+    "160": {
+      "op": "dig 1",
+      "defined_out": [
+        "\"todo_counter\"",
+        "new_id#0",
+        "new_id#0 (copy)",
+        "task#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "new_id#0",
+        "\"todo_counter\"",
+        "new_id#0 (copy)"
+      ]
+    },
+    "162": {
+      "op": "app_global_put",
+      "stack_out": [
+        "task#0",
+        "new_id#0"
+      ]
+    },
+    "163": {
+      "op": "itob",
+      "defined_out": [
+        "task#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0"
+      ]
+    },
+    "164": {
+      "op": "bytec_2 // \"todos\"",
+      "defined_out": [
+        "\"todos\"",
+        "task#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "\"todos\""
+      ]
+    },
+    "165": {
+      "op": "dig 1",
+      "defined_out": [
+        "\"todos\"",
+        "task#0",
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "\"todos\"",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "167": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "task#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "168": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0 (copy)",
+        "task#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0 (copy)"
+      ]
+    },
+    "169": {
+      "op": "box_del",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "task#0",
+        "todo_id#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ]
+    },
+    "170": {
+      "op": "pop",
+      "stack_out": [
+        "task#0",
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "171": {
+      "op": "uncover 2",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "task#0"
+      ]
+    },
+    "173": {
+      "op": "box_put",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "174": {
+      "op": "bytec_3 // \"completed\"",
+      "defined_out": [
+        "\"completed\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "\"completed\""
+      ]
+    },
+    "175": {
+      "op": "dig 1",
+      "stack_out": [
+        "todo_id#0",
+        "\"completed\"",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "177": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%1#0"
+      ]
+    },
+    "178": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "box_prefixed_key%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%1#0",
+        "0x00"
+      ]
+    },
+    "181": {
+      "op": "box_put",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "182": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "0x151f7c75"
+      ]
+    },
+    "183": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "todo_id#0"
+      ]
+    },
+    "184": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tmp%2#0"
+      ]
+    },
+    "185": {
+      "op": "log",
+      "stack_out": []
+    },
+    "186": {
+      "op": "intc_0 // 1",
+      "stack_out": [
+        "1"
+      ]
+    },
+    "187": {
+      "op": "return",
+      "stack_out": []
+    },
+    "188": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.complete_todo[routing]",
+      "params": {},
+      "block": "complete_todo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1"
+    },
+    "191": {
+      "op": "dupn 2",
+      "defined_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "193": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "len%0#0"
+      ]
+    },
+    "194": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "195": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "eq%0#0"
+      ]
+    },
+    "196": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0"
+      ]
+    },
+    "197": {
+      "op": "bytec_2 // \"todos\"",
+      "defined_out": [
+        "\"todos\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "\"todos\""
+      ]
+    },
+    "198": {
+      "op": "swap",
+      "stack_out": [
+        "todo_id#0",
+        "\"todos\"",
+        "todo_id#0"
+      ]
+    },
+    "199": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "200": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "maybe_exists%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "_%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "201": {
+      "op": "bury 1",
+      "stack_out": [
+        "todo_id#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "203": {
+      "op": "bnz complete_todo_after_if_else@3",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "206": {
+      "op": "bytec 4 // 0x000e546f646f206e6f7420666f756e64",
+      "defined_out": [
+        "tmp%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "tmp%1#0"
+      ]
+    },
+    "208": {
+      "block": "complete_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.complete_todo@4",
+      "stack_in": [
+        "todo_id#0",
+        "tmp%1#0"
+      ],
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "tmp%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "209": {
+      "op": "swap",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "0x151f7c75",
+        "tmp%1#0"
+      ]
+    },
+    "210": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "tmp%2#0"
+      ]
+    },
+    "211": {
+      "op": "log",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "212": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "1"
+      ]
+    },
+    "213": {
+      "op": "return",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "214": {
+      "block": "complete_todo_after_if_else@3",
+      "stack_in": [
+        "todo_id#0"
+      ],
+      "op": "bytec_3 // \"completed\"",
+      "defined_out": [
+        "\"completed\""
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "\"completed\""
+      ]
+    },
+    "215": {
+      "op": "dig 1",
+      "defined_out": [
+        "\"completed\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "\"completed\"",
+        "todo_id#0"
+      ]
+    },
+    "217": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%1#0"
+      ]
+    },
+    "218": {
+      "op": "pushbytes 0x80",
+      "defined_out": [
+        "0x80",
+        "box_prefixed_key%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%1#0",
+        "0x80"
+      ]
+    },
+    "221": {
+      "op": "box_put",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "222": {
+      "op": "pushbytes 0x0019546f646f206d61726b656420617320636f6d706c6574656421",
+      "defined_out": [
+        "tmp%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "tmp%1#0"
+      ]
+    },
+    "251": {
+      "op": "b complete_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.complete_todo@4"
+    },
+    "254": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.get_todo[routing]",
+      "params": {},
+      "block": "get_todo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "257": {
+      "op": "dup",
+      "defined_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "258": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "len%0#0"
+      ]
+    },
+    "259": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "260": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "eq%0#0"
+      ]
+    },
+    "261": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "262": {
+      "op": "bytec_2 // \"todos\"",
+      "defined_out": [
+        "\"todos\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "\"todos\""
+      ]
+    },
+    "263": {
+      "op": "swap",
+      "stack_out": [
+        "\"todos\"",
+        "todo_id#0"
+      ]
+    },
+    "264": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "265": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "266": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "_%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "267": {
+      "op": "bury 1",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "269": {
+      "op": "bnz get_todo_after_if_else@3",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "272": {
+      "op": "bytec 4 // 0x000e546f646f206e6f7420666f756e64",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "274": {
+      "block": "get_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.get_todo@4",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "275": {
+      "op": "swap",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "0x151f7c75",
+        "tmp%1#0"
+      ]
+    },
+    "276": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "277": {
+      "op": "log",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "278": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "1"
+      ]
+    },
+    "279": {
+      "op": "return",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "280": {
+      "block": "get_todo_after_if_else@3",
+      "stack_in": [
+        "box_prefixed_key%0#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "281": {
+      "op": "box_get",
+      "defined_out": [
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0"
+      ]
+    },
+    "282": {
+      "error": "check self.todos entry exists",
+      "op": "assert // check self.todos entry exists",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "283": {
+      "op": "b get_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.get_todo@4"
+    },
+    "286": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.is_completed[routing]",
+      "params": {},
+      "block": "is_completed",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "289": {
+      "op": "dup",
+      "defined_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "290": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "len%0#0"
+      ]
+    },
+    "291": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "292": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "eq%0#0"
+      ]
+    },
+    "293": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "todo_id#0"
+      ]
+    },
+    "294": {
+      "op": "bytec_3 // \"completed\"",
+      "defined_out": [
+        "\"completed\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "\"completed\""
+      ]
+    },
+    "295": {
+      "op": "swap",
+      "stack_out": [
+        "\"completed\"",
+        "todo_id#0"
+      ]
+    },
+    "296": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "297": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "298": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "_%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "299": {
+      "op": "bury 1",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "301": {
+      "op": "bnz is_completed_after_if_else@3",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "304": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "307": {
+      "block": "is_completed_after_inlined_smart_contracts.todo_app.contract.TodoApp.is_completed@4",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "308": {
+      "op": "swap",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "0x151f7c75",
+        "tmp%1#0"
+      ]
+    },
+    "309": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "310": {
+      "op": "log",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "311": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "1"
+      ]
+    },
+    "312": {
+      "op": "return",
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "313": {
+      "block": "is_completed_after_if_else@3",
+      "stack_in": [
+        "box_prefixed_key%0#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "314": {
+      "op": "box_get",
+      "defined_out": [
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "aggregate%box_get%0#0",
+        "aggregate%box_get%1#0"
+      ]
+    },
+    "315": {
+      "error": "check self.completed entry exists",
+      "op": "assert // check self.completed entry exists",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "316": {
+      "op": "b is_completed_after_inlined_smart_contracts.todo_app.contract.TodoApp.is_completed@4"
+    },
+    "319": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.get_total_todos[routing]",
+      "params": {},
+      "block": "get_total_todos",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "320": {
+      "op": "bytec_1 // \"todo_counter\"",
+      "defined_out": [
+        "\"todo_counter\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"todo_counter\""
+      ]
+    },
+    "321": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "322": {
+      "error": "check self.todo_counter exists",
+      "op": "assert // check self.todo_counter exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "323": {
+      "op": "itob",
+      "defined_out": [
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "324": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "aggregate%val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "325": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "aggregate%val_as_bytes%0#0"
+      ]
+    },
+    "326": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "327": {
+      "op": "log",
+      "stack_out": []
+    },
+    "328": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "329": {
+      "op": "return",
+      "stack_out": []
+    },
+    "330": {
+      "subroutine": "smart_contracts.todo_app.contract.TodoApp.delete_todo[routing]",
+      "params": {},
+      "block": "delete_todo",
+      "stack_in": [],
+      "op": "txna ApplicationArgs 1"
+    },
+    "333": {
+      "op": "dupn 2",
+      "defined_out": [
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "todo_id#0 (copy)"
+      ]
+    },
+    "335": {
+      "op": "len",
+      "defined_out": [
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "len%0#0"
+      ]
+    },
+    "336": {
+      "op": "intc_2 // 8",
+      "defined_out": [
+        "8",
+        "len%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "len%0#0",
+        "8"
+      ]
+    },
+    "337": {
+      "op": "==",
+      "defined_out": [
+        "eq%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "eq%0#0"
+      ]
+    },
+    "338": {
+      "error": "invalid number of bytes for arc4.uint64",
+      "op": "assert // invalid number of bytes for arc4.uint64",
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0"
+      ]
+    },
+    "339": {
+      "op": "bytec_2 // \"todos\"",
+      "defined_out": [
+        "\"todos\"",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "todo_id#0",
+        "\"todos\""
+      ]
+    },
+    "340": {
+      "op": "swap",
+      "stack_out": [
+        "todo_id#0",
+        "\"todos\"",
+        "todo_id#0"
+      ]
+    },
+    "341": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "342": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "343": {
+      "op": "box_len",
+      "defined_out": [
+        "_%0#0",
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "_%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "344": {
+      "op": "bury 1",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "346": {
+      "op": "bnz delete_todo_after_if_else@3",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "349": {
+      "op": "bytec 4 // 0x000e546f646f206e6f7420666f756e64",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "351": {
+      "block": "delete_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.delete_todo@4",
+      "stack_in": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ],
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "tmp%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "352": {
+      "op": "swap",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "0x151f7c75",
+        "tmp%1#0"
+      ]
+    },
+    "353": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "tmp%2#0"
+      ]
+    },
+    "354": {
+      "op": "log",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "355": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "1"
+      ]
+    },
+    "356": {
+      "op": "return",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "357": {
+      "block": "delete_todo_after_if_else@3",
+      "stack_in": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ],
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "358": {
+      "op": "box_del",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ]
+    },
+    "359": {
+      "op": "pop",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "360": {
+      "op": "bytec_3 // \"completed\"",
+      "defined_out": [
+        "\"completed\"",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "\"completed\""
+      ]
+    },
+    "361": {
+      "op": "dig 2",
+      "defined_out": [
+        "\"completed\"",
+        "box_prefixed_key%0#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "\"completed\"",
+        "todo_id#0"
+      ]
+    },
+    "363": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%2#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%2#0"
+      ]
+    },
+    "364": {
+      "op": "box_del",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ]
+    },
+    "365": {
+      "op": "pop",
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "366": {
+      "op": "pushbytes 0x001a546f646f2064656c65746564207375636365737366756c6c7921",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "tmp%1#0",
+        "todo_id#0"
+      ],
+      "stack_out": [
+        "todo_id#0",
+        "box_prefixed_key%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "396": {
+      "op": "b delete_todo_after_inlined_smart_contracts.todo_app.contract.TodoApp.delete_todo@4"
+    }
+  }
+}
