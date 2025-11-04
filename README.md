@@ -148,6 +148,7 @@ class TodoApp(ARC4Contract):
 
 ## 🌍 Deployed Smart Contract
 
+**App ID:** `748988054`
 **Contract Address:** `LVCKS5HCKLNFBIJQDAOXQBWBRTMANAU5VN3WUNC6LOVNTJX26TSY2XU3UI`
 *(Replace XXX with your deployed contract address once available)*
 
